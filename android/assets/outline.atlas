@@ -1,0 +1,122 @@
+
+outline.png
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+Body
+  rotate: false
+  xy: 2, 613
+  size: 713, 409
+  orig: 715, 411
+  offset: 1, 1
+  index: -1
+FrontLeftBottom
+  rotate: true
+  xy: 2, 5
+  size: 60, 195
+  orig: 62, 197
+  offset: 1, 1
+  index: -1
+FrontLeftHoof
+  rotate: false
+  xy: 725, 2
+  size: 108, 127
+  orig: 110, 129
+  offset: 1, 1
+  index: -1
+FrontRight
+  rotate: true
+  xy: 359, 5
+  size: 115, 364
+  orig: 117, 366
+  offset: 1, 1
+  index: -1
+FrontRightBottom
+  rotate: true
+  xy: 700, 131
+  size: 76, 189
+  orig: 78, 191
+  offset: 1, 1
+  index: -1
+FrontRightHoof
+  rotate: false
+  xy: 835, 6
+  size: 93, 123
+  orig: 95, 125
+  offset: 1, 1
+  index: -1
+LeftHoof
+  rotate: false
+  xy: 249, 4
+  size: 108, 116
+  orig: 110, 118
+  offset: 1, 1
+  index: -1
+LeftLeg
+  rotate: false
+  xy: 2, 67
+  size: 245, 509
+  orig: 247, 511
+  offset: 1, 1
+  index: -1
+Neck
+  rotate: true
+  xy: 249, 122
+  size: 489, 449
+  orig: 491, 451
+  offset: 1, 1
+  index: -1
+Pelvis
+  rotate: true
+  xy: 700, 209
+  size: 367, 314
+  orig: 369, 316
+  offset: 1, 1
+  index: -1
+RightLeg
+  rotate: false
+  xy: 717, 578
+  size: 246, 444
+  orig: 248, 446
+  offset: 1, 1
+  index: -1
+
+outline2.png
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+FrontLeft
+  rotate: true
+  xy: 327, 112
+  size: 128, 362
+  orig: 130, 364
+  offset: 1, 1
+  index: -1
+Head
+  rotate: true
+  xy: 2, 13
+  size: 227, 323
+  orig: 229, 325
+  offset: 1, 1
+  index: -1
+LeftBottom
+  rotate: true
+  xy: 691, 173
+  size: 67, 228
+  orig: 69, 230
+  offset: 1, 1
+  index: -1
+RightBottom
+  rotate: true
+  xy: 327, 17
+  size: 93, 224
+  orig: 95, 226
+  offset: 1, 1
+  index: -1
+RightHoof
+  rotate: false
+  xy: 553, 2
+  size: 109, 108
+  orig: 111, 110
+  offset: 1, 1
+  index: -1
