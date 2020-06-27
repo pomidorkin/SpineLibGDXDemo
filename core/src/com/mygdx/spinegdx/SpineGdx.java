@@ -26,7 +26,7 @@ public class SpineGdx extends ApplicationAdapter implements InputProcessor {
 	private TextureAtlas atlas;
 
 	private SkeletonRenderer renderer;
-	private Skeleton skeleton;
+	private Skeleton skeleton, skeleton2, skeleton3, skeleton4;
 	private AnimationState state;
 
 	// Shader test
@@ -45,9 +45,20 @@ public class SpineGdx extends ApplicationAdapter implements InputProcessor {
 
         SkeletonJson json = new SkeletonJson(atlas);
         SkeletonData skeletonData = json.readSkeletonData(Gdx.files.internal("spineboy.json"));
+        SkeletonData skeletonData3 = json.readSkeletonData(Gdx.files.internal("outfit/spineboy.json"));
+        SkeletonData skeletonData4 = json.readSkeletonData(Gdx.files.internal("body/spineboy.json"));
 
         skeleton = new Skeleton(skeletonData);
         skeleton.setPosition(300f, 100f);
+
+        skeleton2 = new Skeleton(skeletonData);
+        skeleton2.setPosition(500f, 100f);
+
+        skeleton3 = new Skeleton(skeletonData3);
+        skeleton3.setPosition(100f, 100f);
+
+        skeleton4 = new Skeleton(skeletonData4);
+        skeleton4.setPosition(100f, 100f);
 
         AnimationStateData stateData = new AnimationStateData(skeletonData);
         state = new AnimationState(stateData);
@@ -103,17 +114,40 @@ public class SpineGdx extends ApplicationAdapter implements InputProcessor {
 		state.apply(skeleton);
 		skeleton.updateWorldTransform();
 
+        state.apply(skeleton2);
+        skeleton2.updateWorldTransform();
+
+        state.apply(skeleton3);
+        skeleton3.updateWorldTransform();
+
+        state.apply(skeleton4);
+        skeleton4.updateWorldTransform();
+
         Gdx.gl.glClearColor(0, 0, 1, 1);
         Gdx.gl.glClear(GL20.GL_COLOR_BUFFER_BIT);
 
         camera.update();
+
         shader.begin();
-//        shader.setUniformf("texture", 0);
+        shader.setUniformf("u_color", (float)Math.random(), (float)Math.random(),(float)Math.random(),1.0f);
         shader.end();
 //        batch.getProjectionMatrix().set(camera.combined);
 		batch.begin();
 //		batch.draw(img, 0, 0);
+//        batch.setShader(shader);
         renderer.draw(batch, skeleton);
+        batch.setShader(null);
+        renderer.draw(batch, skeleton2);
+        renderer.draw(batch, skeleton3);
+        batch.end();
+        shader.begin();
+        shader.setUniformf("u_color", 0.14f, 0.11f,0.08f,1.0f);
+        shader.end();
+        batch.begin();
+        batch.setShader(shader);
+        renderer.draw(batch, skeleton4);
+//        batch.setShader(null);
+
 		batch.end();
 	}
 	
